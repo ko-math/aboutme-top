@@ -38,7 +38,7 @@ new MutationObserver(sendHeight)
 
 
 async function aboutMeApi() {
-    const res = await fetch("aaa");
+    const res = await fetch("https://dawn-sunset-28f6.ktomita2012.workers.dev");
     return await res.json();
 }
 
