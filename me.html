@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="ja">
+    <title>ko-math</title>
+</head>
+<body>
+    <iframe id="parFrame" src="./doThing.html" style="width:100%; border:none;"></iframe>
+    <script>
+        
+        window.addEventListener('message', e => {
+            document.getElementById('parFrame').height =
+            e.data + 'px';
+        });
+
+    </script>
+
+</body>
+</html>
