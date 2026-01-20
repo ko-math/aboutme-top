@@ -49,8 +49,11 @@ async function aboutMe() {
     wrapper.classList.add('aboutMe');
 
     wrapper.innerHTML = `
-        <h3>${aboutMeValue.username}</h3>
-        <p>${aboutMeValue.profile?.bio ?? ""}</p>
+        <h1>${aboutMeValue.username}</h1><br>
+        <h2>私について</h2><br>
+        <p>${aboutMeValue.profile?.bio ?? ""}</p><br>
+        <h2>私が取り組んでいること</h2><br>
+        <p>${aboutMeValue.profile?.status ?? ""}</p>
     `;
 
     document.getElementById('aboutMeApi').appendChild(wrapper);
