@@ -25,3 +25,15 @@ html, body {
   border: none;
   display: block;
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column; /* 縦並びにする */
+}
+
+.sidebar a {
+  display: block;          /* 1行ずつ */
+  padding: 8px;
+  cursor: pointer;
+}
+
