@@ -3,11 +3,10 @@ const pages = {
     <iframe src="./doThing.html"></iframe>
   `,
   create: `
-  
+  <h1>My projects</h1>
   `,
   message: `
-    <h1>アクセス</h1>
-    <p>〇〇市〇〇町</p>
+    <h1>message</h1>
   `
 };
 
