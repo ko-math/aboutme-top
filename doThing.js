@@ -61,7 +61,7 @@ let html = `
 
 html = html.replaceAll(
   'href="/',
-  'href="https://scratch.mit.edu/'
+  'target="_blank" href="https://scratch.mit.edu/'
 );
 
 const wrapper = document.createElement('div');
