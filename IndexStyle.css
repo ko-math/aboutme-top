@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: #f8f9fa;
+  padding: 16px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar .title {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sidebar a:hover {
+  background: #e8eaed;
+}
+
+.content {
+  padding: 24px;
+  flex: 1;
+}
