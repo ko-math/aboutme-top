@@ -1,6 +1,6 @@
 async function doThingApi(n) {
     const res = await fetch(`https://scratch.mit.edu/site-api/users/all/ko-math/`);
-    return await res.text();
+    return await res.json();
 }
 
 async function doThing() {
