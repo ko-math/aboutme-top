@@ -7,8 +7,8 @@ async function doThing() {
     const removeElements = document.getElementsByClassName('doThingElement');
     for (let removeElement of removeElements){
         removeElement.remove();
+
     }
-    
     const count =document.getElementById('doThingCount').value;
     let doThing = await doThingApi(count);   // ★ const → let
 
@@ -20,11 +20,9 @@ async function doThing() {
     const wrapper = document.createElement('div');
     wrapper.classList.add('doThingElement');
     wrapper.innerHTML = doThing;
-    document.getElementById('doThingApi').appendChild(wrapper);
+    document.getElementById('topProjectApi').appendChild(wrapper);
 }
 
-const inputDoThing =document.getElementById('doThingButton');
-inputDoThing.addEventListener("click",doThing);
 
 
 function sendHeight() {
