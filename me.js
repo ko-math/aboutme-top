@@ -2,8 +2,9 @@ const pages = {
   about:`
     <iframe src="./doThing.html"></iframe>
   `,
-  create: `
+  top: `
   <h1>My projects</h1>
+   <iframe src="./topProjects.html"></iframe>
   `,
   message: `
     <h1>message</h1>
