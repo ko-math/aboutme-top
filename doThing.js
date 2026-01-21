@@ -61,8 +61,14 @@ let html = `
 
 html = html.replaceAll(
   'href="/',
-  'target="_blank" href="https://scratch.mit.edu/'
+  'href="https://scratch.mit.edu/'
 );
+
+html = html.replaceAll(
+  '<a ',
+  '<a target="_blank" rel="noopener noreferrer" '
+);
+
 
 const wrapper = document.createElement('div');
 wrapper.classList.add('aboutMe');
