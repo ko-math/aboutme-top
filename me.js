@@ -16,4 +16,4 @@ function loadPage(name) {
 }
 
 // 初期表示
-loadPage('home');
+loadPage('about');
