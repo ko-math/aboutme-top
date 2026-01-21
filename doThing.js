@@ -45,20 +45,25 @@ async function aboutMeApi() {
 async function aboutMe() {
     const aboutMeValue = await aboutMeApi();
 
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('aboutMe');
+let html = `
+  <h1>${aboutMeValue.username}</h1><br>
+  <h2>私について</h2><br>
+  <p>${aboutMeValue.profile?.bio ?? ""}</p><br>
+  <h2>私が取り組んでいること</h2><br>
+  <p>${aboutMeValue.profile?.status ?? ""}</p>
+`;
 
-    wrapper.innerHTML = `
-        <h1>${aboutMeValue.username}</h1><br>
-        <h2>私について</h2><br>
-        <p>${aboutMeValue.profile?.bio ?? ""}</p><br>
-        <h2>私が取り組んでいること</h2><br>
-        <p>${aboutMeValue.profile?.status ?? ""}</p>
-    `;
-    wrapper = wrapper.replaceAll(
-      'href="/',
-      'href="https://scratch.mit.edu/'
-    );
+html = html.replaceAll(
+  'href="/',
+  'href="https://scratch.mit.edu/'
+);
+
+const wrapper = document.createElement('div');
+wrapper.classList.add('aboutMe');
+wrapper.innerHTML = html;
+
+document.getElementById('aboutMeApi').appendChild(wrapper);
+
 
     document.getElementById('aboutMeApi').appendChild(wrapper);
 }
