@@ -1,7 +1,7 @@
 const pages = {
-  about:
+  about:`
     <iframe src="./doThing.html"></iframe>
-  ,
+  `,
   event: `
   
   `,
