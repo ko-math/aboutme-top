@@ -37,3 +37,11 @@ html, body {
   cursor: pointer;
 }
 
+details summary {
+  cursor: pointer;
+  padding: 8px;
+}
+details div {
+  margin-left: 16px;
+  padding: 6px;
+}
