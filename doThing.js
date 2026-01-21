@@ -69,9 +69,6 @@ wrapper.classList.add('aboutMe');
 wrapper.innerHTML = html;
 
 document.getElementById('aboutMeApi').appendChild(wrapper);
-
-
-    document.getElementById('aboutMeApi').appendChild(wrapper);
 }
 
 aboutMe();
