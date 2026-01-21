@@ -10,7 +10,13 @@ async function doThing() {
     }
     
     const count =document.getElementById('doThingCount').value;
-    const doThing = await doThingApi(count);
+    let doThing = await doThingApi(count);   // ★ const → let
+
+    doThing = doThing.replaceAll(            // ★ 追加
+      'href="/',
+      'href="https://scratch.mit.edu/'
+    );
+
     const wrapper = document.createElement('div');
     wrapper.classList.add('doThingElement');
     wrapper.innerHTML = doThing;
