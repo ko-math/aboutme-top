@@ -1,6 +1,6 @@
 const pages = {
   about:
-    ./doThing.html
+    <iframe src="./doThing.html"></iframe>
   ,
   event: `
   
