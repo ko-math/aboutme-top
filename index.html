@@ -16,13 +16,11 @@
     <aside class="sidebar">
       <div class="title">ko-mathのホームページ</div>
       <a onclick="loadPage('about')">about</a>
-      <div class="item" onclick="toggleSub('create-sub')">
-      My projects ▸
-      </div>
-      <div id="create-sub" class="sub hidden">
-        <div onclick="loadPage('create1')">作品1</div>
-        <div onclick="loadPage('create2')">作品2</div>
-      </div>
+      <details>
+        <summary>My projects</summary>
+          <div onclick="loadPage('aaa')">作品1</div>
+          <div onclick="loadPage('bbb')">作品2</div>
+      </details>
       <a onclick="loadPage('message')">message</a>
     </aside>
 
