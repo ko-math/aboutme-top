@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="ja">
-    <title>ko-math</title>
+  <meta charset="UTF-8">
+  <title>Google Sites風</title>
+  <link rel="stylesheet" href="IndexStyle.css">
 </head>
 <body>
-    <iframe id="parFrame" src="./doThing.html" style="width:100%; border:none;"></iframe>
-    <script>
-        
-        window.addEventListener('message', e => {
-            document.getElementById('parFrame').height =
-            e.data + 'px';
-        });
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="title">学校案内</div>
+      <a onclick="loadPage('home')">ホーム</a>
+      <a onclick="loadPage('about')">学校概要</a>
+      <a onclick="loadPage('event')">行事</a>
+      <a onclick="loadPage('access')">アクセス</a>
+    </aside>
 
-    </script>
+    <main id="content" class="content"></main>
+  </div>
 
+  <script src="me.js"></script>
 </body>
 </html>
