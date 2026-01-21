@@ -55,6 +55,10 @@ async function aboutMe() {
         <h2>私が取り組んでいること</h2><br>
         <p>${aboutMeValue.profile?.status ?? ""}</p>
     `;
+    wrapper = wrapper.replaceAll(
+      'href="/',
+      'href="https://scratch.mit.edu/'
+    );
 
     document.getElementById('aboutMeApi').appendChild(wrapper);
 }
