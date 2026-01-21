@@ -1,18 +1,9 @@
 const pages = {
-  home: `
-    <h1>ホーム</h1>
-    <p>ようこそ。</p>
-  `,
-  about: `
-    <h1>学校概要</h1>
-    <p>本校は〜</p>
-  `,
+  about:
+    ./doThing.html
+  ,
   event: `
-    <h1>行事</h1>
-    <ul>
-      <li>運動会</li>
-      <li>文化祭</li>
-    </ul>
+  
   `,
   access: `
     <h1>アクセス</h1>
