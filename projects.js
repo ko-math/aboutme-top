@@ -14,7 +14,7 @@ async function embedFeaturedProject(username) {
   iframe.allowFullscreen = true;
   iframe.style.border = "none";
 
-  document.getElementById("content").appendChild(iframe);
+  document.getElementById("topProjectApi").appendChild(iframe);
 }
 
 embedFeaturedProject("ko-math");
