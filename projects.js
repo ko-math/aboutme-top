@@ -1,27 +1,23 @@
-async function doThingApi(n) {
-    const res = await fetch(`https://scratch.mit.edu/site-api/users/all/ko-math/`);
-    return await res.json();
+async function embedFeaturedProject(username) {
+  const res = await fetch(
+    "https://scratch.mit.edu/site-api/users/all/" + username
+  );
+  const data = await res.json();
+
+  const fp = data.profile?.featured_project;
+  if (!fp) return;
+
+  const iframe = document.createElement("iframe");
+  iframe.src = `https://scratch.mit.edu/projects/${fp.id}/embed`;
+  iframe.width = "100%";
+  iframe.height = "480";
+  iframe.allowFullscreen = true;
+  iframe.style.border = "none";
+
+  document.getElementById("content").appendChild(iframe);
 }
 
-async function doThing() {
-    const removeElements = document.getElementsByClassName('doThingElement');
-    for (let removeElement of removeElements){
-        removeElement.remove();
-
-    }
-    const count =document.getElementById('doThingCount').value;
-    let doThing = await doThingApi(count);   // ★ const → let
-
-    doThing = doThing.replaceAll(            // ★ 追加
-      'href="/',
-      'href="https://scratch.mit.edu/'
-    );
-
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('doThingElement');
-    wrapper.innerHTML = doThing;
-    document.getElementById('topProjectApi').appendChild(wrapper);
-}
+embedFeaturedProject("ko-math");
 
 
 
